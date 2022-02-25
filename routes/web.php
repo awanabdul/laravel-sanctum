@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+  return view('welcome');
+});
+
+Route::get('/user', function() {
+  \App\Models\address::create(
+    [
+      'user_id' => 1,
+      'country' => 'Autsralia',
+    ]
+  );
 });
